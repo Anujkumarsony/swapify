@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* General layout */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #555;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-link {
+  display: block;
+  margin-top: 15px;
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* General layout */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.signup-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #555;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.signup-input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+.login-link {
+  display: block;
+  margin-top: 15px;
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* General Navbar Layout */
+.header-container {
+  background-color: #007BFF; /* Navbar background color */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixed positioning to keep it at the top */
+  top: 0; /* Aligns it at the top */
+  left: 0; /* Aligns it to the left edge */
+  right: 0; /* Aligns it to the right edge */
+  z-index: 1000; /* Ensures it's above other content */
+  font-family: Arial, sans-serif;
+}
+
+/* Logo and Navigation Links */
+.header-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 30px;
+  transition: color 0.3s ease;
+}
+
+.header-container a:hover {
+  color: #ffdd57; /* Hover effect on links */
+}
+
+/* Search Bar Styling */
+.search {
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  outline: none;
+  width: 250px;
+  transition: width 0.3s ease; /* Smooth transition when clicked */
+  margin-right: 15px;
+  padding-left: 15px;
+}
+
+.search:focus {
+  width: 300px; /* Expands the search bar when focused */
+  border-color: #ffdd57; /* Border color when focused */
+}
+
+.search-btn {
+  padding: 8px 16px;
+  background-color: #ffdd57; /* Button color */
+  color: #007BFF; /* Text color */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #ffcd39; /* Hover effect for search button */
+}
+
+/* Login/Logout Button Styling */
+.loginButton, .logout-btn {
+  padding: 8px 16px;
+  background-color: #ffdd57; /* Consistent button design */
+  color: #007BFF;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase; /* All caps text */
+}
+
+.loginButton:hover, .logout-btn:hover {
+  background-color: #ffcd39; /* Hover effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .search {
+      width: 100%; /* Full-width search bar for mobile */
+      margin-bottom: 10px;
+  }
+
+  .search-btn, .loginButton, .logout-btn {
+      width: 100%; /* Full-width buttons for mobile */
+      margin-bottom: 10px;
+  }
+
+  .header-container a {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+}
+
+/* Container for Categories */
+.cat-container {
+  background-color: #f8f9fa; /* Light background */
+  padding: 21px 30px; /* Increased padding for better spacing */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px; /* Space from the navbar (adjust as needed) */
+  margin-bottom: 20px; /* Space from the bottom */
+}
+
+/* Header for Categories */
+.cat-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap */
+}
+
+/* Title for Categories */
+.cat-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+  margin-right: 20px; /* Space between title and categories */
+}
+
+/* Individual Category Item */
+.category-item {
+  background-color: #007BFF; /* Blue background for categories */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 5px; /* Space between category items */
+  transition: background-color 0.3s ease;
+}
+
+.category-item:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
